@@ -34,7 +34,7 @@ foreach ($file in $files) {
 
     $takenDate = $Null
     $counter++
-    Write-Progress "$numFiles image files." -PercentComplete (100 * $counter / $numFiles)
+    Write-Progress -Activity "$numFiles image files." -Status "Files copied: $counter" -PercentComplete (100 * $counter / $numFiles)
 
     $image = New-Object -TypeName System.Drawing.Bitmap -ArgumentList $file.FullName
     [string]$targetPath = $Null
@@ -106,7 +106,7 @@ foreach ($file in $files) {
 
     $takenDate = $Null
     $counter++
-    Write-Progress "$numFiles video files." -PercentComplete (100 * $counter / $numFiles)
+    Write-Progress -Activity "$numFiles video files." -Status "Files copied: $counter" -PercentComplete (100 * $counter / $numFiles)
 
     $year = $file.LastWriteTime.Year.ToString()
     $month = $file.LastWriteTime.Month.ToString()
