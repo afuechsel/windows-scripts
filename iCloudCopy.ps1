@@ -42,8 +42,8 @@ foreach ($file in $files) {
     try {
         $takenDateExists = $image.PropertyIdList -Contains $takenDatePropertyId
         if (-Not $takenDateExists) {
-            $year = $file.LastWriteTime.Year.ToString()
-            $month = $file.LastWriteTime.Month.ToString()
+            $year = $file.LastWriteTime.Year
+            $month = $file.LastWriteTime.Month
             $target = "{0:d4}-{1:d2}" -f $year, $month
             $targetPath = Join-Path $imageDestinationPath $year $target
         } else {
@@ -108,8 +108,8 @@ foreach ($file in $files) {
     $counter++
     Write-Progress -Activity "$numFiles video files." -Status "Files copied: $counter" -PercentComplete (100 * $counter / $numFiles)
 
-    $year = $file.LastWriteTime.Year.ToString()
-    $month = $file.LastWriteTime.Month.ToString()
+    $year = $file.LastWriteTime.Year
+    $month = $file.LastWriteTime.Month
     $target = "{0:d4}-{1:d2}" -f $year, $month
     $targetPath = Join-Path $videoDestinationPath $year $target
 
