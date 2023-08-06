@@ -75,7 +75,7 @@ foreach ($file in $files) {
                 $newFile.LastWriteTime = $takenDate
             } 
         }
-        $file.Delete()
+        attrib +o -p +u $file
 
     } catch {
         $err = $_
@@ -121,7 +121,7 @@ foreach ($file in $files) {
         Copy-Item -Path $file.FullName -Destination $targetPath | Out-Null
         $copyCounter++
     }
-    $file.Delete()
+    attrib +o -p +u $file
 
 } 
 
