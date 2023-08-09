@@ -89,8 +89,8 @@ foreach ($file in $files) {
 
 } 
 
-Write-Output "Finished processing $numFiles video files."
-Write-Output "Moved $copyCounter files to '$imageDestinationPath.'"
+Write-Output "Finished processing $numFiles image files."
+Write-Output "Moved $copyCounter image files to '$imageDestinationPath.'"
 
 # ============================================================================================== 
 # copy videos
@@ -126,6 +126,6 @@ foreach ($file in $files) {
 } 
 
 Write-Output "Finished processing $numFiles video files."
-Write-Output "Moved $copyCounter to '$videoDestinationPath.'"
+Write-Output "Moved $copyCounter video files to '$videoDestinationPath.'"
 
 Get-Date -Format "dd.MM.yyyy HH:mm" | Out-File -FilePath $configFilename -Force
