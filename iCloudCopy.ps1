@@ -6,7 +6,7 @@
 
 Add-Type -AssemblyName System.Drawing
 
-$sourcePath = "D:\afuec\Pictures\iCloud Photos\Photos"
+$sourcePath = "C:\users\afuec\iCloud Photos\Photos"
 $imageDestinationPath = "D:\afuec\OneDrive\Bilder\Allgemeines" 
 $videoDestinationPath = "D:\afuec\Videos"  
 
@@ -31,6 +31,7 @@ $numFiles = $files.Count
 [Int32]$takenDatePropertyId = 36867
 
 foreach ($file in $files) {
+    Write-Output $file
 
     $takenDate = $Null
     $counter++
