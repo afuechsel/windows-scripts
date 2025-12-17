@@ -1,0 +1,4 @@
+Diese Datei enthält den Verlauf der Diskussion zwischen Benutzer und ChatGPT,
+die zur Entwicklung von iCloudCopyV2 geführt hat.
+
+(The conversation log is intentionally included as documentation context.)
